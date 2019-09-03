@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+    <script src="script.js" ></script>
+    <script src="calend.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calend.css">
+</head>
+<body onload="start()">
+    <div id="main" class="back">
+        <div >
+            <button onclick="ShowPopup()">Добавить задачу</button>
+            <table class="tabclass">
+            </table>
+        </div>
+       
+    </div>
+    <div id="popup" class="popupWin">
+        <label>
+            Описание задачи 
+        </label><br>
+        <input id="description" type="text">
+        <label>Приоритет :</label>
+        <select id="priority">
+            <option value="Низкий">Низкий</option>
+            <option value="Средний">Средний</option>
+            <option value="Высокий ">Высокий</option>
+        </select>
+        <label>Статус</label>
+        <select id="status" >
+            <option id="Новый">Новый</option>
+            <option id="В работе">В работе</option>
+            <option id="Завершено ">Завершено</option>
+        </select>
+        <br>
+        <label>Крайний срок</label><br>
+        <input id="deadline" onClick="xCal(this)" onKeyUp="xCal()">
+        <label id="reallab">Фактичская дата окончания :</label><br>
+        <input id="realFin" onClick="xCal(this)" onKeyUp="xCal()">
+        <button id="Add" onclick="Add()" >Добавить</button>
+        <button id="Save" onclick="Save()"  >Сохранить</button>       
+    </div> 
+
+</body>
